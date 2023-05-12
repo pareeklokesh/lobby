@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Rummy Lobby</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/Fontawsome/css/all.min.css">
+	 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+</head>
+<body style="background: #000;">
+<div class="fullpage w-100">
+	<div class="header w-100">
+		<div class="w-100 d-flex justify-content-between align-items- headerTop">
+			<div class="w-auto d-flex align-items-center">
+				<button class="backbtn me-5"><i class="fa-solid fa-chevron-left"></i></button>
+				<!-- <div class="d-flex userprofile align-items-center me-5">
+					<img src="assets/img/user-thumbnail.jpg" />
+					<p>1234567890</p>
+				</div> -->
+				<div class="winpoint">
+						<img class="profileimage" src="assets/img/user-thumbnail.jpg" />
+						<p><strong>1234567890</strong></p>
+					</div>
+				<div class="d-flex">
+					<!-- <div class="winpoint">
+						<i class="fa-solid fa-trophy"></i>
+						<p><strong>Win</strong><span>51</span></p>
+					</div> -->
+					<div class="winpoint" style="margin-right: 0;">
+						<!-- <i class="fa-solid fa-plus"></i> -->
+						<p style="margin: 0;"><strong>Add Cash</strong></p>
+					</div>
+					<!-- <button class="addcasebtn me-5" style="margin-left: 0;"><i class="fa-solid fa-plus"></i>&nbsp;&nbsp;7545</button> -->
+					<!-- <button class="addcasebtn m-0">Add Cash&nbsp;&nbsp;<i class="fa-solid fa-plus"></i></button> -->
+				</div>
+			</div>
+			<div class="w-auto position-relative">
+				<button class="btnsetting"><i class="fa-solid fa-users"></i></button>
+				<button class=" btnsetting btnsettingMenu"><i class="fa-solid fa-gear"></i></button>
+				<div class="menuDiv">
+					<ul class="navbar-menu">
+						<li>
+							<a class="nav-item-menu" href="#">Home</a>
+						</li>
+						<li>
+							<a class="nav-item-menu" href="#">About</a>
+						</li>
+						<li>
+							<a class="nav-item-menu" href="#">Blog</a>
+						</li>
+						<li>
+							<a class="nav-item-menu" href="#">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="lobby-container">
+		<div class="lobbydiv position-relative">
+			<div class="lobby-player">
+				<img src="assets/img/user-thumbnail.jpg" />
+				<p>474xxxxx11<span class="d-block">50</span></p>
+			</div>
+			<div class="lobby-player lobby-player-bottom d-flex align-items-center lobby-player-active">
+				<p>474xxxxx11</p>
+				<img src="assets/img/user-thumbnail.jpg" />
+				<span class="d-block">50</span>
+			</div>
+			<div class="lobby-player lobby-player-right">
+				<img src="assets/img/user-thumbnail.jpg" />
+				<p>474xxxxx11<span class="d-block">50</span></p>
+			</div>
+
+			<div class="lobby-player lobby-player-right lobby-player-right1">
+				<div class="position-relative">
+				<img src="assets/img/user-thumbnail.jpg" />
+				<div class="pro-loader">15<span></span></div>
+			</div>
+			<p>474xxxxx11<span class="d-block">50</span></p>
+			</div>
+			<div class="lobby-player lobby-player-left">
+				<img src="assets/img/user-thumbnail.jpg" />
+				<p>474xxxxx11<span class="d-block">50</span></p>
+			</div>
+			<div class="lobby-player lobby-player-left lobby-player-left1">
+				<img src="assets/img/user-thumbnail.jpg" />
+				<p>474xxxxx11<span class="d-block">50</span></p>
+			</div>
+
+			<div class="autodroup">
+				<input type="checkbox" id="autodrop" name="">
+				<label for="autodrop">AutoDrop</label>
+			</div>
+
+			<div class="rummyPoint">
+				<p>101 Pool Rummy-1</p>
+			</div>
+
+			<div class="opencards w-100 d-flex justify-content-center">
+				<div class="cardslot1 position-relative">
+					<img src="assets/img/card01.png" class="card-rotate" width="100">
+					<img src="assets/img/cardsback.png" width="100" style="box-shadow: none;">
+				</div>
+				<div class="d-flex cardslot2">
+					<div class=""><img class="cardoverlay" src="assets/img/card02.png" width="100"><img src="assets/img/card02.png" width="100"></div>
+					<div class="opennewcards position-relative">
+						<button class="openpatti">
+							<i class="fa-solid fa-angles-right d-block"></i>
+							Open Cards
+						</button>
+						<div class="openpatti-modal">
+							<button class="openpatti-modal-close"><i class="fa-solid fa-xmark"></i></button>
+							<div class="w-100 openpatti-modalbg scroller">
+							<div class="cardpatti-row d-flex">
+								<img src="assets/img/card06.png">
+								<img src="assets/img/card07.png">
+								<img src="assets/img/card08.png">
+							</div>
+							<div class="cardpatti-row d-flex">
+								<img src="assets/img/card06.png">
+								<img src="assets/img/card07.png">
+								<img src="assets/img/card08.png">
+							</div>
+							<div class="cardpatti-row d-flex">
+								<img src="assets/img/card06.png">
+								<img src="assets/img/card07.png">
+								<img src="assets/img/card08.png">
+							</div>
+							<div class="cardpatti-row d-flex">
+								<img src="assets/img/card06.png">
+								<img src="assets/img/card07.png">
+								<img src="assets/img/card08.png">
+							</div>
+							<div class="cardpatti-row d-flex">
+								<img src="assets/img/card06.png">
+								<img src="assets/img/card07.png">
+								<img src="assets/img/card08.png">
+							</div>
+						</div>
+
+						</div>
+					</div>
+					<div class="finishslot">
+						<p>Finish Slot</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="d-flex justify-content-center cardsalldiv">
+			<div class="cards-patti d-flex position-relative">
+				<img src="assets/img/card03.png"class="cardslide" />
+				<img src="assets/img/card04.png"class="cardslide" />
+				<img src="assets/img/card05.png"class="cardslide" />
+			</div>
+			<div class="cards-patti d-flex position-relative">
+				<img src="assets/img/card06.png"class="cardslide" />
+				<img src="assets/img/card07.png"class="cardslide" />
+				<img src="assets/img/card08.png"class="cardslide" />
+			</div>
+			<div class="cards-patti d-flex position-relative">
+				<img src="assets/img/card09.png"class="cardslide" />
+				<img src="assets/img/card10.png"class="cardslide" />
+				<img src="assets/img/card011.png"class="cardslide" />
+			</div>
+			<div class="cards-patti d-flex position-relative">
+				<img src="assets/img/card012.png"class="cardslide" />
+				<img src="assets/img/card013.png"class="cardslide" />
+				<img src="assets/img/card014.png" class="activeCards" />
+				<button class="discard-btn position-absolute">Discard</button>
+			</div>
+			<div class="cards-patti d-flex position-relative">
+				<img src="assets/img/card015.png" class="cardslide" />
+			</div>
+		</div>
+
+		<div class="declarediscard-btn">
+			<button class="discard-btn declare-btn">Declare</button>
+			<button class="discard-btn">Discard</button>
+			<button class="discard-btn group-btn">Group</button>
+		</div>
+
+		</div>
+
+		
+	</div>
+	<div class="playerpointfix">
+		#800800 -10020072558
+	</div>
+	
+</div>
+
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script>
+    
+  /*$(".btnsettingMenu").on("click", function(e) {
+    $(".menuDiv").toggleClass("menuDivOpen");
+    e.stopPropagation()
+  });
+  $(document).on("click", function(e) {
+    if ($(e.target).is(".side_bar") === false) {
+      $(".menuDiv").toggleClass("menuDivOpen");
+    }
+  });*/
+  $(".btnsettingMenu").click(function(){
+		$(".menuDiv").toggleClass("menuDivOpen");
+	});
+
+</script>
+<script>
+	$(".openpatti").click(function(){
+		$(".openpatti-modal").addClass("openpatti-modal-open");
+	});
+	$(".openpatti-modal-close").click(function(){
+		$(".openpatti-modal").removeClass("openpatti-modal-open");
+	});
+	$(".cardslide").click(function(){
+		//debugger
+		//$(this).addClass("cardslideactive");
+		var link = $(".cardoverlay");
+
+var offset = link.offset();
+var top = "-" + offset.top + "px";
+var left = "-" + offset.left + "px";
+var bottom = $(window).height() - link.height();
+bottom = offset.top - bottom + "px";
+var right = $(window).height() - link.height();
+right = offset.top - right + "px";
+/*var right = $(window).width() - link.width();
+right = offset.left - right;*/
+//$(this).css({"position" : "absolute", "left" : left, "right" : right, "top" : top, "bottom" : bottom, });
+$(this).css({"position" : "absolute", /*"left" : left,  "right" : right,*/ "transform" : "translate("+ left +", "+ top +")", /*"top" : top, "bottom" : bottom,*/});
+	});
+
+</script>
+
+
+
+</body>
+</html>
