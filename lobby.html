@@ -98,6 +98,7 @@
 				<p>101 Pool Rummy-1</p>
 			</div>
 
+			<div class="w-100 position-relative">
 			<div class="opencards w-100 d-flex justify-content-center">
 				<div class="cardslot1 position-relative">
 					<img src="assets/img/card01.png" class="card-rotate" width="100">
@@ -174,6 +175,7 @@
 				<img src="assets/img/card015.png" class="cardslide" />
 			</div>
 		</div>
+	</div>
 
 		<div class="declarediscard-btn">
 			<button class="discard-btn declare-btn">Declare</button>
@@ -217,21 +219,37 @@
 	});
 	$(".cardslide").click(function(){
 		//debugger
+		/*var fullwidth = $(".cardsalldiv").width();
+		var imgWidth = $(this).width();*/
 		//$(this).addClass("cardslideactive");
+		var thisoffset = $(this);
 		var link = $(".cardoverlay");
+var offsetthis = thisoffset.offset();
+var leftthis = offsetthis.left;
+ 
 
 var offset = link.offset();
 var top = "-" + offset.top + "px";
-var left = "-" + offset.left + "px";
+var left =  offset.left;
 var bottom = $(window).height() - link.height();
 bottom = offset.top - bottom + "px";
 var right = $(window).height() - link.height();
 right = offset.top - right + "px";
+
+var thsleftandleft = left - leftthis + "px";
+/*var ddd = fullwidth - imgWidth + "px";*/
+/*var ss = ddd.css({"width" : "calc({"+ fullwidth +", "+ imgWidth +"})"});*/
+/*$(".cardsalldiv").width(ddd);*/
 /*var right = $(window).width() - link.width();
 right = offset.left - right;*/
 //$(this).css({"position" : "absolute", "left" : left, "right" : right, "top" : top, "bottom" : bottom, });
-$(this).css({"position" : "absolute", /*"left" : left,  "right" : right,*/ "transform" : "translate("+ left +", "+ top +")", /*"top" : top, "bottom" : bottom,*/});
+$(this).css({"position" : "relative", "top" : "-23px", "left" : "19px", "box-shadow" : "none", "z-index" : "1", /*"left" : left,  "right" : right,*/ "transform" : "translate("+ thsleftandleft +", "+ top +")", /*"top" : top, "bottom" : bottom,*/});
+
+/*$(this).parent().css({"width" : "calc({"+ fullwidth +", "+ imgWidth +"})"});
+   $('#element').css("width",$('#element').width()-275+"px");*/
+
 	});
+	
 
 </script>
 

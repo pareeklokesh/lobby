@@ -3,18 +3,56 @@
 <head>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Rummy Lobby</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" href="assets/Fontawsome/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body style="background: #170c06 !important;">
-<div class="fullpage w-100">
+<body class="rummylobbybody" style="background: #170c06 !important;">
+<div class="fullpage w-100" style="overflow-x: hidden;">
 	<div class="header w-100">
 		<div class="w-100 d-flex justify-content-between align-items- headerTop">
 			<div class="w-auto d-flex align-items-center">
-				<button class="backbtn me-5"><i class="fa-solid fa-chevron-left"></i></button>
+				<button class="btn pokertable-topbtn me-3 lobbytable-menu"><i class="fa-solid fa-bars"></i></button>
+
+				<div class="pokertablemenu-des pokertablemenumain-des pokerlobbymenu-des position-absolute top-0">
+        <button class="btn text-uppercase landscape-block"><img class="profile-menu position-relative" src="assets/img/user-thumbnail.jpg"><span><span class="d-block w-100">Hi,</span>Shiveesinghal</span></button>
+        <button class="lobbyclose-btn" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+
+        <ul class="pokerMenu-list">
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-forward-step"></i> transaction</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><img src="assets/img/cash.png" width="24">KYC</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-person-arrow-up-from-line"></i> Bank Details</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-person-arrow-up-from-line"></i> Deposit History </a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-question"></i> My Transactions</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-right-from-bracket"></i> My Invitations</a>
+          </li>
+          <li class="d-block">
+            <a href="#" class="text-capitalize pokernav-item"><i class="fa-solid fa-right-from-bracket"></i> Player Invitations</a>
+          </li>
+          <li class="d-block">
+            <button class="text-uppercase logout-lobbybtn">LOgout</button>
+          </li>
+        </ul>
+
+      </div>
+
+
+
 				<div class="d-flex userprofile align-items-center me-5">
 					<img src="assets/img/user-thumbnail.jpg" />
-					<p>1234567890</p>
+					<p class="mb-0">1234567890</p>
 				</div>
 				<div class="d-flex">
 					<button class="addcasebtn me-5" style="margin-left: 0;"><i class="fa-solid fa-plus"></i>&nbsp;&nbsp;7545</button>
@@ -22,25 +60,43 @@
 				</div>
 			</div>
 			<div class="w-auto">
-				<button class="btnsetting"><i class="fa-solid fa-users"></i></button>
-				<button class=" btnsetting"><i class="fa-solid fa-gear"></i></button>
+				<button class="btnsetting" data-bs-toggle="modal" data-bs-target="#privateModal"><i class="fa-solid fa-users"></i></button>
+				<button class="btnsetting settingspopup"><i class="fa-solid fa-gear"></i></button>
+				<div class="pokertablemenu-des settingpopup position-absolute top-0">
+				<button class="btn text-uppercase position-relative">Settings <i class="fa-solid fa-xmark"></i></button>
+				<ul class="pokerMenu-list">
+					<li class="d-block pokernav-item text-uppercase switchToggle">
+						<i class="fa-solid fa-music"></i> Sound <input type="checkbox" id="switch" class="" name="">
+				    <label for="switch" class="value_add"></label>
+					</li>
+					<li class="d-block pokernav-item text-uppercase switchToggle">
+						<i class="fa-solid fa-mobile"></i> Vibration <input type="checkbox" id="muteChat" class="" name="">
+				    <label for="muteChat" class="value_add"></label>
+					</li>
+				</ul>
+			</div>
+
 			</div>
 		</div>
-		<div class="d-flex align-items-center justify-content-between">
-			<div class="w-auto playersdiv d-flex">
-				<button class="points-btn position-relative pointactive">Points</button>
-				<button class="points-btn position-relative pointactive" style="border-color: #6fbb95;">Pool</button>
-				<button class="points-btn position-relative pointactive" style="border-color: #d1ab46;">Deals</button>
-			</div>
+
+	</div>
+
+<div class="nav nav-tabs playersdiv w-100 d-flex align-items-center justify-content-between border-0" id="nav-tab" role="tablist">
+	<div class="w-auto">
+			<button class="points-btn position-relative pointactive active" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Points</button>
+			<button class="points-btn position-relative pointactive" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" style="border-color: #6fbb95;">Pool</button>
+			<button class="points-btn position-relative pointactive" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false" style="border-color: #d1ab46;">Deals</button>
+		</div>
 			<div class="w-auto">
-				<ul class="playersactive">
+				<ul class="playersactive p-0 m-0">
 					<li>2 Players</li>
 					<li class="active">6 Players</li>
 				</ul>
 			</div>
-		</div>
-	</div>
-	<div class="card-row w-auto d-flex flex-wrap">
+  </div>
+  <div class="tab-content w-100" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+  	<div class="card-row w-auto d-flex flex-wrap">
 		<div class="carddiv">
 			<div class="cardcontent">
 				<p>101 Pool</p>
@@ -156,13 +212,159 @@
 		</div>
 
 	</div>
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+  	<div class="card-row w-auto d-flex flex-wrap justify-content-center">
+  	<div class="carddiv">
+  	<div class="cardcontent">
+				<p>101 Pool</p>
+				<h2>1 <span>Entry Fee</span></h2>
+				<p class="opentable">Open Table: (0/6)</p>
+				<button class="playnow-btn">Play Now</button>
+			</div>
+		</div>
+			<div class="carddiv">
+			<div class="cardcontent">
+				<p>101 Pool</p>
+				<h2>1 <span>Entry Fee</span></h2>
+				<p class="opentable">Open Table: (0/6)</p>
+				<button class="playnow-btn addfunds-btn">add funds</button>
+			</div>
+		</div>
+		<div class="carddiv">
+			<div class="cardcontent">
+				<p>101 Pool</p>
+				<h2 style="">1 <span>Entry Fee</span></h2>
+				<p class="opentable">Open Table: (0/6)</p>
+				<button class="playnow-btn">Play Now</button>
+			</div>
+		</div>
+		<div class="carddiv">
+			<div class="cardcontent">
+				<p>101 Pool</p>
+				<h2 style="">1 <span>Entry Fee</span></h2>
+				<p class="opentable">Open Table: (0/6)</p>
+				<button class="playnow-btn">Play Now</button>
+			</div>
+		</div>
+		<div class="carddiv">
+			<div class="cardcontent">
+				<p>101 Pool</p>
+				<h2 style="">1 <span>Entry Fee</span></h2>
+				<p class="opentable">Open Table: (0/6)</p>
+				<button class="playnow-btn">Play Now</button>
+			</div>
+		</div>
+	</div>
+  </div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+  	<div class="card-row w-auto d-flex flex-wrap justify-content-center">
+  	<div class="carddiv">
+  	<div class="cardcontent">
+				<p>101 Pool</p>
+				<h2 style="background: #875b12;">1 <span>Entry Fee</span></h2>
+				<p class="opentable">Open Table: (0/6)</p>
+				<button class="playnow-btn">Play Now</button>
+			</div>
+		</div>
+		<div class="carddiv">
+			<div class="cardcontent">
+				<p>101 Pool</p>
+				<h2 style="background: #875b12;">1 <span>Entry Fee</span></h2>
+				<p class="opentable">Open Table: (0/6)</p>
+				<button class="playnow-btn">Play Now</button>
+			</div>
+		</div>
+		<div class="carddiv">
+			<div class="cardcontent">
+				<p>101 Pool</p>
+				<h2>1 <span>Entry Fee</span></h2>
+				<p class="opentable">Open Table: (0/6)</p>
+				<button class="playnow-btn addfunds-btn">add funds</button>
+			</div>
+		</div>
+		<div class="carddiv">
+			<div class="cardcontent">
+				<p>101 Pool</p>
+				<h2 style="background: #875b12;">1 <span>Entry Fee</span></h2>
+				<p class="opentable">Open Table: (0/6)</p>
+				<button class="playnow-btn">Play Now</button>
+			</div>
+		</div>
+		<div class="carddiv">
+			<div class="cardcontent">
+				<p>101 Pool</p>
+				<h2 style="background: #875b12;">1 <span>Entry Fee</span></h2>
+				<p class="opentable">Open Table: (0/6)</p>
+				<button class="playnow-btn">Play Now</button>
+			</div>
+		</div>
+	</div>
+  </div>
 </div>
 
+<!-- Private Modal -->
+
+<div class="modal fade privateModal" id="privateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header justify-content-between align-items-center border-0">
+        <button class="btn userslash-btn position-relative p-0">
+      <i class="fa-solid fa-file"></i>
+      </button>
+        <h5 class="modal-title" id="exampleModalLabel">Private Table</h5>
+        <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center align-items-center joinplayDiv">
+          <div class="w-auto">
+          <h6 class="joinplay-btn-hd mb-0">Room Code</h6>
+        </div>
+        <div class="w-auto">
+          <input type="text" name="" class="joinplay-btninput mb-0">
+        </div>
+        <div class="w-auto">
+          <button class="joinplay-btn mb-0">Join & Play</button>
+        </div>
+        </div>
+
+      </div>
+      <div class="modal-footer border-0 justify-content-center">
+        <p class="d-block text-center">Want to create a private table? <button class="privatetable-create border-0">Create Now</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <script>
 	$(".playersactive li").click(function(){
 		$(this).addClass("active").siblings().removeClass("active");
 	});
+</script>
+<script>
+    $(function() {
+  $(".lobbytable-menu").on("click", function(e) {
+    $(".pokertablemenumain-des").toggleClass("pokertablemenu-des-open");
+    e.stopPropagation()
+  });
+  $(document).on("click", function(e) {
+    if ($(e.target).is(".side_bar") === false) {
+      $(".pokertablemenumain-des").removeClass("pokertablemenu-des-open");
+    }
+  });
+});
+
+    $(".settingspopup").click(function(){
+	$(".settingpopup").toggleClass("settingpopup-open");
+});
+$(".settingpopup button i").click(function(){
+	$(".settingpopup").removeClass("settingpopup-open");
+});
+
 </script>
 
 </body>
