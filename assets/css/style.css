@@ -271,7 +271,7 @@ border: 1px solid #bcaf61 !important;
   left: 0;
 }
 .pokerlobbymenu-des {
-  width: 290px !important;
+  width: 270px !important;
 }
 .pokertablemenu-des-open {
   transform: translate(0);
@@ -328,7 +328,7 @@ border: 1px solid #bcaf61 !important;
 .pokernav-item {
   display: block;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   border-bottom: 1.9px solid #464227;
   padding: 8px 30px;
   transition: all .4s linear;
