@@ -900,7 +900,7 @@ border-radius: 5px;
   left: 10px;
 }
 .autodroup {
-  position: absolute;
+  /*position: absolute;*/
   display: block;
   bottom: -21px;
   left: 70px;
@@ -1120,7 +1120,7 @@ body {
   background: linear-gradient(to bottom, #0bbe0a, #068807);
 }
 .declarediscard-btn {
-  position: absolute;
+  /*position: absolute;*/
   bottom: -35px;
   right: 0;
 }
@@ -1286,6 +1286,12 @@ display: none;
 }
 .cardoverlay {
   margin-right: -80px;
+}
+.table-block {
+  max-width: 1170px;
+  margin: 0px auto;
+  position: relative;
+  min-height: 100vh;
 }
 
 
