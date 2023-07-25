@@ -271,7 +271,7 @@ border: 1px solid #bcaf61 !important;
   left: 0;
 }
 .pokerlobbymenu-des {
-  width: 270px !important;
+  width: 290px !important;
 }
 .pokertablemenu-des-open {
   transform: translate(0);
@@ -328,7 +328,7 @@ border: 1px solid #bcaf61 !important;
 .pokernav-item {
   display: block;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   border-bottom: 1.9px solid #464227;
   padding: 8px 30px;
   transition: all .4s linear;
@@ -1293,6 +1293,22 @@ display: none;
 
 
 
+
+
+@media (min-width:1170px) {
+  .table-block {
+  max-width: 1170px;
+  margin: 0px auto;
+}
+.header {
+  position: absolute;
+  top: 0;
+}
+body {
+  padding-top: 40px;
+}
+
+}
 
 
 @media screen and (max-width: 1300px) {
